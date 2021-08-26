@@ -6,6 +6,7 @@ import Home from './Home';
 import Projects from './Projects';
 import Accomplishments from './Accomplishments';
 import Footer from './Footer';
+import Error from './Error';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/projects' exact={true} component={Projects}/>
           <Route path='/accomplishments' exact={true} component={Accomplishments}/>
           <Route path='/contact' exact={true} component={Contact}/>
+          <Route path='/not_available' exact={true} component={Error}/>
         </Switch>
         <Footer/>
     </Router>

@@ -10,40 +10,51 @@ import { Form, Button } from 'react-bootstrap';
 function Contact() {
   return (
     <React.StrictMode>
-      <div class="text">
+      <div class="text" style={{marginTop:"4%"}}>
         <h1 style={{textAlign: "center;"}}>Contact me</h1>
       </div>
-      <form class="container" style={{marginTop:" 5%;width: 70%;"}}>
-  
-  
-  <div class="form-outline mb-4">
-    <input type="text" id="form4Example1" class="form-control" />
-    <label class="form-label" for="form4Example1">Name</label>
-  </div>
 
-  
-  <div class="form-outline mb-4">
-    <input type="email" id="form4Example2" class="form-control" />
-    <label class="form-label" for="form4Example2">Email address</label>
-  </div>
+    <div style={{marginLeft:"9%", marginRight:"40%"}}>
+      
+      <Form>
 
-  
-  <div class="form-outline mb-4">
-    <input type="phone" id="form4Example2" class="form-control" />
-    <label class="form-label" for="form4Example2">Phone number</label>
-  </div>
+      <Form.Group className="mb-3" controlId="formBasicText">
+          <Form.Label style={{color:'black'}}>Name</Form.Label>
+          <Form.Control type="text" placeholder="Please enter your name" />
+          <Form.Text className="text-muted">
+          </Form.Text>
+        </Form.Group>
 
-  
-  <div class="form-outline mb-4">
-    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-    <label class="form-label" for="form4Example3">Message</label>
-  </div>
 
-  
-  <div style={{width:"30%",marginLeft: "35%;"}}>
-    <button  type="submit" class="btn btn-dark btn-block mb-4" >Send</button>
-  </div>  
-</form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label style={{color:'black'}}>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Please enter your email" />
+          <Form.Text className="text-muted">
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicText">
+          <Form.Label style={{color:'black'}}>Subject</Form.Label>
+          <Form.Control type="text" placeholder="Please enter the subject" />
+          <Form.Text className="text-muted">
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicText">
+          <Form.Label style={{color:'black'}}>Message</Form.Label>
+          <Form.Control type="text" placeholder="Please enter the message" />
+          <Form.Text className="text-muted">
+          </Form.Text>
+        </Form.Group>
+        <br/>
+        <Button variant="dark" type="submit">
+        Submit
+      </Button>
+    </Form>
+    <br/>
+    <br/>
+    <br/>
+    </div>
     </React.StrictMode>
   );
 }

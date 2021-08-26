@@ -10,7 +10,7 @@ import './Navbar.css';
 function Navbar() {
   return (
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
     <div class="container-fluid">
    
     <button
