@@ -14,7 +14,8 @@ class Contact extends React.Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      status : ''
     }
   }
 
@@ -27,10 +28,10 @@ class Contact extends React.Component {
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {
-        alert("Message Sent.");
+        this.state.status = "Message sent. Thank you! ";
         this.resetForm()
       } else if(response.data.status === 'fail') {
-        alert("Message failed to send.")
+        this.state.status = "Message not sent, please try later. Thank you!";
       }
     })
   }
@@ -49,7 +50,9 @@ class Contact extends React.Component {
     <div style={{marginLeft:"9%", marginRight:"30%"}}>
       
 
-
+    <h4 style={{color:"black"}}>{this.state.status}</h4>
+    <br/>
+    <br/>
     <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
           <div className="form-group">
               <label htmlFor="name">Name</label>
