@@ -27,7 +27,7 @@ params={{
 <br/>
 <br/>
   
-  <p style={{color: "white",zIndex:"5;"}}>The concept of traditional education has changed radically within the last couple of years. Being physically present in a classroom isn’t the only learning option anymore — not with the rise of the internet and new technologies, at least. Nowadays, we have access to a quality education whenever and wherever we want, as long as we have access to internet. We are now living a new era — the revolution of online education, that's why I have decided to learn and benefit from this asset under the slogan "Realizing the Future of Learning Today", hereafter some of my accomplissements :
+  <p style={{color: "white",zIndex:"5;"}}>The concept of traditional education has changed radically within the last couple of years. Being physically present in a classroom isn’t the only learning option anymore — not with the rise of the internet and new technologies, at least. Nowadays, we have access to a quality education whenever and wherever we want, as long as we have access to internet. We are now living a new era — the revolution of online education, that's why I have decided to learn and benefit from this asset, hereafter some of my accomplissements :
     <br/><br/>
     
     <br/>

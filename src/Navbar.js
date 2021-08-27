@@ -6,6 +6,7 @@ import {
 import Home from './Home';
 import Contact from './Contact';
 import './Navbar.css';
+import oicon from './img/oicon.png'
 
 function Navbar() {
   return (
@@ -28,13 +29,17 @@ function Navbar() {
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       
-      <a class="navbar-brand mt-2 mt-lg-0" >
+      <a class="navbar-brand mt-1 mt-lg-0" style={{color:"white"}}>
+      
+      <img src={oicon} width={"40px"}/>
       <Link to='/' style={{color:"white"}}>
-      AhmedZIANE
+      Ahmed 
+       ZIANE
       </Link>
       </a>
       
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
         <li class="nav-item">
         <a class="nav-link" id="url">
           	<Link to='/' style={{color:"white"}}>Home</Link>
@@ -73,6 +78,11 @@ function Navbar() {
       </a>
       <a class="text-reset me-3" href="https://github.com/AhmedZIANE">
         <i class="fab fa-github" style={{color:"white"}}></i>
+        
+      </a>
+      <a class="text-reset me-3" href="https://ahmed-ziane.medium.com/">
+      <i class="fab fa-medium-m" style={{color:"white"}}>
+      </i>
         
       </a>
     </div>

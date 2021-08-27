@@ -4,59 +4,89 @@ import ahmed from './img/ahmed.png';
 import Navbar from './Navbar';
 
 import { Form, Button } from 'react-bootstrap';
+import axios from 'axios';
+import Popup from './Popup';
 
+class Contact extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      message: ''
+    }
+  }
 
-function Contact() {
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(this.state);
+    axios({
+      method: "POST",
+      url:"http://localhost:3002/send",
+      data:  this.state
+    }).then((response)=>{
+      if (response.data.status === 'success') {
+        alert("Message Sent.");
+        this.resetForm()
+      } else if(response.data.status === 'fail') {
+        alert("Message failed to send.")
+      }
+    })
+  }
+
+  resetForm(){
+    this.setState({name: "", email: "", message: ""})
+  }
+
+  render() {
   return (
     <React.StrictMode>
       <div class="text" style={{marginTop:"4%"}}>
         <h1 style={{textAlign: "center;"}}>Contact me</h1>
       </div>
 
-    <div style={{marginLeft:"9%", marginRight:"40%"}}>
+    <div style={{marginLeft:"9%", marginRight:"30%"}}>
       
-      <Form>
-
-      <Form.Group className="mb-3" controlId="formBasicText">
-          <Form.Label style={{color:'black'}}>Name</Form.Label>
-          <Form.Control type="text" placeholder="Please enter your name" />
-          <Form.Text className="text-muted">
-          </Form.Text>
-        </Form.Group>
 
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label style={{color:'black'}}>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Please enter your email" />
-          <Form.Text className="text-muted">
-          </Form.Text>
-        </Form.Group>
+    <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+          <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+          </div>
+          <div className="form-group">
+              <label htmlFor="exampleInputEmail1">Email address</label>
+              <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+          </div>
+          <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+          </div>
+          <button type="submit" className="btn btn-dark">Submit</button>
+        </form>
 
-        <Form.Group className="mb-3" controlId="formBasicText">
-          <Form.Label style={{color:'black'}}>Subject</Form.Label>
-          <Form.Control type="text" placeholder="Please enter the subject" />
-          <Form.Text className="text-muted">
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicText">
-          <Form.Label style={{color:'black'}}>Message</Form.Label>
-          <Form.Control type="text" placeholder="Please enter the message" />
-          <Form.Text className="text-muted">
-          </Form.Text>
-        </Form.Group>
-        <br/>
-        <Button variant="dark" type="submit">
-        Submit
-      </Button>
-    </Form>
     <br/>
     <br/>
     <br/>
     </div>
+    <Popup/>
     </React.StrictMode>
   );
+}
+      onNameChange(event) {
+        this.setState({name: event.target.value})
+      }
+
+      onEmailChange(event) {
+        this.setState({email: event.target.value})
+      }
+
+      onMessageChange(event) {
+        this.setState({message: event.target.value})
+      }
+
+     
 }
 
 export default Contact;
