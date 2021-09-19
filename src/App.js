@@ -1,12 +1,12 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import Contact from './Contact';
 import Navbar from './Navbar';
 import Home from './Home';
 import Projects from './Projects';
 import Accomplishments from './Accomplishments';
 import Footer from './Footer';
-import Error from './Error';
+import Clustering from './Clustering';
 
 function App() {
   return (
@@ -17,8 +17,9 @@ function App() {
           <Route path='/projects' exact={true} component={Projects}/>
           <Route path='/accomplishments' exact={true} component={Accomplishments}/>
           <Route path='/contact' exact={true} component={Contact}/>
-          <Route path='/not_available' exact={true} component={Error}/>
+          
         </Switch>
+        <Route path='/projects/segmenting&clusteringNeighborhoods' component={Clustering}/>
         <Footer/>
     </Router>
   );

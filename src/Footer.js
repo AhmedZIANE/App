@@ -18,13 +18,12 @@ function Footer() {
         href="https://twitter.com/Ahmed58092938"
         role="button"
         data-mdb-ripple-color="dark"
-        ><i class="fab fa-twitter"></i
-      ></a>
+        ><i class="fab fa-twitter"></i></a>
 
       
       <a
         class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://www.linkedin.com/in/ahmed-ziane-649282147/"
+        href="https://www.linkedin.com/in/ahmedziane/"
         role="button"
         data-mdb-ripple-color="dark"
         ><i class="fab fa-linkedin"></i

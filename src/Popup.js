@@ -1,7 +1,6 @@
 import React from 'react';
 import './Home.css';
-import ahmed from './img/ahmed.png';
-import Navbar from './Navbar';
+
 
 function Popup() {
   return (

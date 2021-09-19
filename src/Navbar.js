@@ -3,15 +3,13 @@ import {
   Link,
 } from 'react-router-dom';
 
-import Home from './Home';
-import Contact from './Contact';
 import './Navbar.css';
 import oicon from './img/oicon.png'
 
 function Navbar() {
   return (
     
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-black">
     <div class="container-fluid">
    
     <button
@@ -67,7 +65,7 @@ function Navbar() {
     
     <div class="d-flex align-items-center">
       
-      <a class="text-reset me-3" href="https://www.linkedin.com/in/ahmed-ziane-649282147/">
+      <a class="text-reset me-3" href="https://www.linkedin.com/in/ahmedziane/">
         
         <i class="fab fa-linkedin" style={{color:"white"}}></i>
       </a>

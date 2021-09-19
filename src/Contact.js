@@ -72,6 +72,7 @@ class Contact extends React.Component {
     <br/>
     <br/>
     <br/>
+    
     </div>
     <Popup/>
     </React.StrictMode>
