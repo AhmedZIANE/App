@@ -16,7 +16,7 @@ function Clustering() {
     
     <p>
     <br/>
-    In this project, we will convert addresses into their equivalent latitude and longitude values. Also, we will use the Foursquare API to explore neighborhoods in Toronto, Canada. We will use the explore function to get the most common venue categories in each neighborhood, and then use this feature to group the neighborhoods into clusters. We will use the k-means clustering algorithm. Finally, we will use the Folium library to visualize the neighborhoods in North York City and their emerging clusters.
+    In this project, we will convert addresses into their equivalent latitude and longitude values. Also, we will use the Foursquare API to explore neighborhoods in Toronto, Canada. We will use the explore function to get the most common venue categories in each neighborhood, and then use this feature to group the neighborhoods into clusters. We will use the k-means clustering algorithm. Finally, we will use the Folium library to visualize the neighborhoods in North York, an administrative district in Toronto and their emerging clusters.
     </p>
     <br/>
     <br/>
