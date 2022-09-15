@@ -128,7 +128,7 @@ Gradually, the idea of ​​starting to sell their own “internal service” i
 </ul>
 
 <br/>
-Even today, AWS improves and launches new services every year. [Source: Bloomberg]
+Even today, AWS improves and launches new services every year.
 </p>
 <br/>
 
@@ -177,7 +177,7 @@ Even today, AWS improves and launches new services every year. [Source: Bloomber
 <br/>
 
 <h4><strong>So let’s dive now into the interesting stuff 😋</strong></h4>
-<br/>
+
 <br/>
 To deploy and host a web application on AWS, we would need a Virtual Private Cloud (VPC) which will provide the network connecting EC2 virtual machines containing the servers.
 
@@ -187,7 +187,7 @@ The database will be deployed on an EC2 machine in the private subnet to prevent
 
 The front-end and back-end will be deployed on an EC2 machine in a public subnet. The front-end and back-end will be hosted and will be accessible to the users. Actually, users shouldn’t access the back-end too, but I am getting ahead, we will see how to achieve that too.
 <br/>
-Nginx server will be used to deploy React Application as a front-end and Gunicorn server will be used to deploy Python Flask Application as back-end. <br/><br/>PS : There is another alternative using AWS Amplify for hosting the front-end and a serverless computing service for the backend AWS Lambda, flask in this case which will be very benefical since we will not pay for resources except when they are used, but we will not see it in this demo 😕, but who know we may see it here in the futur 😉.
+Nginx server will be used to deploy React Application as a front-end and Gunicorn server will be used to deploy Python Flask Application as back-end. <br/><br/>PS : There is another alternative using AWS Amplify for hosting the front-end and a serverless computing service for the backend AWS Lambda, flask in this case which will be very benefical since we will not pay for resources except when they are used, but we will not see it in this demo 😕, but who knows we may see it here in the near futur 😉.
 <br/>
 <br/>
 I will be deploying my personal website project as an example. So let’s jump to the next blog — <strong><Link to={`${url}/part2`} style = {{color : "black"}}> Part 2: Setting up AWS VPC and Subnet</Link></strong>
