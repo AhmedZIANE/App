@@ -2,11 +2,15 @@ import React from 'react';
 import './Projects.css';
 
 import can_cluster from './img/can_cluster.PNG';
-import currency from './img/currency.jpg';
-import tweet from './img/tweet.jpg';
-import book from './img/book.jpg';
-import camion from './img/camion.jpg';
+import currency from './img/currency.png';
+import mywebsite from './img/mywebsite.PNG';
+import textclass from './img/textclass.png';
+import book from './img/book.png';
+import camion from './img/camion.png';
+import kmean from './img/kmean.png';
 import Popup from './Popup';
+import reactFlask from './img/reactFlask.webp'
+import clustering from './img/clustering.gif'
 import {
   BrowserRouter as Router,
   Link,
@@ -21,14 +25,41 @@ function Projects() {
         
       <main class="mt-5" >
       <div class="container">
+
+      <section>
+          <div class="row">
+            <div class="col-md-6 gx-5 mb-4" style={{marginTop:"6%"}}>
+            <Link to={`${url}/hosting`}>
+              <h4 style={{color:"black"}}><strong>Hosting my website created using React, Flask and MongoDB on AWS</strong></h4>
+              </Link>
+              <p class="text-muted">
+              One of the most important, frustrating, common and underrated tasks in web development is hosting the web service. Underrated for student developers, because they usually don’t come to the stage of building full-fledged applications to be used on a large scale and hence they don’t care much about hosting their web application projects. Underrated for professional developers working in big Companies, because they have dedicated automated scripts and tools that deploys and hosts their web services for them with few commands, for example, Walmart has OneOps and Amazon has AWS.
+              </p>
+              <Link to={`${url}/hosting`} style={{color:"black"}}>
+                Continue reading
+              </Link>
+            </div>
+              <div class="col-md-6 gx-5 mb-4" style={{marginTop:"6%"}}>
+              <div  data-mdb-ripple-color="light">
+              
+              <Link to={`${url}/hosting`}>
+                <img src={reactFlask} class="img-fluid" />
+              </Link>
+                
+              </div>
+            
+            </div>
+          </div>
+        </section>
+        <hr/>
         <section >
           <div class="row" >
             <div class="col-md-6 gx-5 mb-4" style={{marginTop:"6%"}}>
-              <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+              <div data-mdb-ripple-color="light">
                 
               
               <Link to={`${url}/segmenting&clusteringNeighborhoods`}>
-              <img src={can_cluster} class="img-fluid" />
+              <img src={kmean} class="img-fluid" width = "480px;" />
               </Link>
             
               </div>
@@ -70,9 +101,9 @@ service accessible directly by the customer via Internet.
               </a>
             </div>
               <div class="col-md-6 gx-5 mb-4">
-              <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+              <div  data-mdb-ripple-color="light">
               <a href="" data-mdb-toggle="modal" data-mdb-target="#exampleModal" >
-                <img src={currency} class="img-fluid" />
+                <img src={currency } width = "370px;" class="img-fluid" />
               </a>
                 
               </div>
@@ -84,9 +115,9 @@ service accessible directly by the customer via Internet.
         <section>
           <div class="row">
             <div class="col-md-6 gx-5 mb-4">
-              <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+              <div  data-mdb-ripple-color="light">
               <a href="" data-mdb-toggle="modal" data-mdb-target="#exampleModal" >
-                <img src = {tweet} class="img-fluid" />
+                <img src = {textclass} class="img-fluid" />
               </a>
                 
               </div>
@@ -122,7 +153,7 @@ service accessible directly by the customer via Internet.
               </a>
             </div>
               <div class="col-md-6 gx-5 mb-4">
-              <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+              <div  data-mdb-ripple-color="light">
               <a href="" data-mdb-toggle="modal" data-mdb-target="#exampleModal" >
                 <img src={book} class="img-fluid" />
               </a>

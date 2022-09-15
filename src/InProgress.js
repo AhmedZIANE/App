@@ -1,4 +1,5 @@
 import React from 'react';
+import aws from './img/aws.png';
 
 function InProgress() {
   return (
@@ -9,7 +10,7 @@ function InProgress() {
     <div class="card">
       <h5 class="card-header">Certificate</h5>
       <div class="card-body">
-      <h5 class="card-title">...
+      <h5 class="card-title">AWS and IA
     </h5>
       <p class="card-text">
         <br/>
@@ -18,7 +19,7 @@ function InProgress() {
       <br/>
       
       <hr/>
-      <p>...</p>
+      <p><img src={aws} style ={{height : "40px"}}class="img-fluid" /></p>
       </div>
     </div>
 

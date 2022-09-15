@@ -5,6 +5,8 @@ import Home from './Home';
 import Projects from './Projects';
 import Accomplishments from './Accomplishments';
 
+const d = new Date();
+
 function Footer() {
   return (
     <footer class="text-center text-white" style={{backgroundColor: "#f1f1f1"}}>
@@ -48,7 +50,8 @@ function Footer() {
   </div>
  
   <div class="text-center text-dark p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2);"}}>
-    © 2021 Copyright : 
+  
+    © {d.getFullYear()} Copyright : 
     <a class="text-dark" href="https://www.ahmed-ziane.com/"> Ahmed ZIANE</a>
   </div>
   

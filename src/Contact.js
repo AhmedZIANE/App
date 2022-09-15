@@ -1,70 +1,50 @@
-import React from 'react';
-import './Home.css';
-import ahmed from './img/ahmed.png';
-import Navbar from './Navbar';
-
-import { Form, Button } from 'react-bootstrap';
-import axios from 'axios';
+import { useState } from 'react';
+import APIService from './APIService';
 import Popup from './Popup';
 
-class Contact extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      status : ''
-    }
+const Contact = (props) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  
+  const handleSubmit=(event)=>{ 
+    event.preventDefault()
+    APIService.InsertArticle({"name": name , "email" : email, "message" : message})
+    /*setName(event.target.value)
+    setEmail(event.target.value)
+    setMessage(event.target.value)
+  */
+    setName("")
+    setEmail("")
+    setMessage("")
+    alert("Thank youu " + name + " for getting in touch with me 😄");
+    
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    console.log(this.state);
-    axios({
-      method: "POST",
-      url:"http://localhost:3002/send",
-      data:  this.state
-    }).then((response)=>{
-      if (response.data.status === 'success') {
-        this.state.status = "Message sent. Thank you! ";
-        this.resetForm()
-      } else if(response.data.status === 'fail') {
-        this.state.status = "Message not sent, please try later. Thank you!";
-      }
-    })
-  }
-
-  resetForm(){
-    this.setState({name: "", email: "", message: ""})
-  }
-
-  render() {
-  return (
-    <React.StrictMode>
-      <div class="text" style={{marginTop:"4%"}}>
+return (
+     <div>
+     <div className="text" style={{marginTop:"4%"}}>
         <h1 style={{textAlign: "center;"}}>Contact me</h1>
       </div>
 
     <div style={{marginLeft:"9%", marginRight:"30%"}}>
       
 
-    <h4 style={{color:"black"}}>{this.state.status}</h4>
+    <h4 style={{color:"black"}}></h4>
     <br/>
     <br/>
-    <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+    <form id="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+              <input type="text" className="form-control" id="name" value={name} onChange={(e)=>setName(e.target.value)} required/>
           </div>
           <div className="form-group">
               <label htmlFor="exampleInputEmail1">Email address</label>
-              <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+              <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={email} onChange={(e)=>setEmail(e.target.value)}  required />
           </div>
           <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+              <textarea className="form-control" rows="5" id="message" value={message} onChange={(e)=>setMessage(e.target.value)}  required/>
           </div>
           <button type="submit" className="btn btn-dark">Submit</button>
         </form>
@@ -75,22 +55,7 @@ class Contact extends React.Component {
     
     </div>
     <Popup/>
-    </React.StrictMode>
-  );
+     </div>
+)
 }
-      onNameChange(event) {
-        this.setState({name: event.target.value})
-      }
-
-      onEmailChange(event) {
-        this.setState({email: event.target.value})
-      }
-
-      onMessageChange(event) {
-        this.setState({message: event.target.value})
-      }
-
-     
-}
-
 export default Contact;

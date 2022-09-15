@@ -1,10 +1,65 @@
 import React from 'react';
 
+import ibm from './img/ibm.PNG'
+import aws from './img/aws.png'
+import googleCloud from './img/googleCloud.png'
+import stanford from './img/stanford.webp'
+
 function Finished() {
   return (
     <React.StrictMode>
     
     <div class="container" id="container">
+
+    <div class="card">
+      <h5 class="card-header">Certificate</h5>
+      <div class="card-body">
+      <h5 class="card-title">AWS Cloud Technical Essentials 
+    </h5>
+      <p class="card-text">
+      <button type="button" class="btn btn-outline-success btn-rounded" data-mdb-ripple-color="dark"> Completed</button>
+      </p>
+      <br/>
+      <a href="https://www.coursera.org/account/accomplishments/verify/K6NSS99YEW3C?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" class="btn btn-dark" style={{color:"white"}}>View certificate</a>
+      <br/>
+      <br/>
+      <hr/>
+      
+        <p >
+        <img src={aws} style ={{height : "40px"}}class="img-fluid" />
+        </p>      
+      </div>
+      <br/>
+      <br/>
+      
+    </div>
+    <br/>
+    <br/>
+    <div class="card">
+      <h5 class="card-header">Certificate</h5>
+      <div class="card-body">
+      <h5 class="card-title">Data Science Professional Certificate
+
+    </h5>
+      <p class="card-text">
+      <button type="button" class="btn btn-outline-success btn-rounded" data-mdb-ripple-color="dark"> Completed</button>
+      </p>
+      <br/>
+      <a href="https://www.credly.com/badges/59524f26-1360-40f3-b73c-4a353821327f" class="btn btn-dark" style={{color:"white"}}>View certificate</a>
+      <br/>
+      <br/>
+      <hr/>
+      
+        <p >
+        <img src={ibm} style ={{height : "50px"}}class="img-fluid" />
+        </p>      
+      </div>
+      <br/>
+      <br/>
+      
+    </div>
+    <br/>
+    <br/>
 
     <div class="card">
       <h5 class="card-header">Certificate</h5>
@@ -21,7 +76,7 @@ function Finished() {
       <hr/>
       
         <p >
-        IBM
+        <img src={ibm} style ={{height : "50px"}}class="img-fluid" />
         </p>      
       </div>
       <br/>
@@ -44,7 +99,8 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>IBM</p>
+      <img src={ibm} style ={{height : "50px"}}class="img-fluid" />
+
       </div>
       <br/>
       <br/>
@@ -66,7 +122,7 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>IBM</p>
+      <p><img src={ibm} style ={{height : "50px"}}class="img-fluid" /></p>
       </div>
       <br/>
       <br/>
@@ -88,7 +144,7 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>IBM</p>
+      <p><img src={ibm} style ={{height : "50px"}}class="img-fluid" /></p>
       </div>
       <br/>
       <br/>
@@ -110,7 +166,7 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>IBM</p>
+      <p><img src={ibm} style ={{height : "50px"}}class="img-fluid" /></p>
       </div>
       <br/>
       <br/>
@@ -132,7 +188,7 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>IBM</p>
+      <p><img src={ibm} style ={{height : "50px"}}class="img-fluid" /></p>
       </div>
       <br/>
       <br/>
@@ -154,7 +210,7 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>IBM</p>
+      <p><img src={ibm} style ={{height : "50px"}}class="img-fluid" /></p>
       </div>
       <br/>
       <br/>
@@ -162,11 +218,6 @@ function Finished() {
     </div>
     <br/>
     <br/>
-
-  
-
-
-
 
     <div class="card">
       <h5 class="card-header">Certificate</h5>
@@ -181,7 +232,7 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>STANFORD UNIVERSITY</p>
+      <p><img src={stanford} style ={{height : "50px"}} class="img-fluid" /></p>
       </div>
       <br/>
       <br/>
@@ -202,7 +253,7 @@ function Finished() {
       <br/>
       <br/>
       <hr/>
-      <p>Google Cloud</p>
+      <p><img src={googleCloud} style ={{height : "30px"}}/></p>
       </div>
       <br/>
       <br/>  

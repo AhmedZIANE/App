@@ -1,4 +1,5 @@
 import React from 'react';
+import uci from './img/UCI.png'
 
 function CertifHome() {
   return (
@@ -19,7 +20,7 @@ function CertifHome() {
       <br/>
       <br/>
       <hr/>
-      <p>UNIVERSITY OF CALIFORNIA, IRVINE</p>
+      <p>UNIVERSITY OF CALIFRNIA <img src={uci} style ={{height : "50px"}} className="img-fluid" />  </p>
       </div>
     </div>
 
