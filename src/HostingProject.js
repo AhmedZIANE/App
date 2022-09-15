@@ -158,7 +158,8 @@ Even today, AWS improves and launches new services every year. [Source: Bloomber
     </li>
     <br/>
     <li>
-    <strong>Sécurité :</strong> dans le cloud, vous aurez la possibilité de chiffrer vos données facilement et à la volée.
+    <strong>Security :</strong> In the cloud, you will have the ability to encrypt your data easily and on the fly.
+
     </li>
   </ul>
 <br/>
