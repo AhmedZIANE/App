@@ -45,7 +45,7 @@
       "react-app/jest"
     ]
   },
-  "proxy":"http://localhost:5000/",
+  "proxy":"https://g1nmdzeyx4.execute-api.us-west-2.amazonaws.com/",
   "browserslist": {
     "production": [
       ">0.2%",
