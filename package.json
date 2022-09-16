@@ -45,7 +45,7 @@
       "react-app/jest"
     ]
   },
-  "proxy":"https://g1nmdzeyx4.execute-api.us-west-2.amazonaws.com/",
+  "proxy":"https://g1nmdzeyx4.execute-api.us-west-2.amazonaws.com/staging",
   "browserslist": {
     "production": [
       ">0.2%",
