@@ -11,7 +11,7 @@ import HostingProject from './HostingProject';
 import HostingProjectP2 from './HostingProjectP2';
 import HostingProjectP3 from './HostingProjectP3';
 import HostingProjectP4 from './HostingProjectP4';
-
+import Author from './Author';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path='/' exact={true} component={Home}/>
           <Route path='/projects' exact={true} component={Projects}/>
           <Route path='/accomplishments' exact={true} component={Accomplishments}/>
+          <Route path='/author' exact={true} component={Author}/>
           <Route path='/contact' exact={true} component={Contact}/>
           
         </Switch>

@@ -55,6 +55,11 @@ function Navbar() {
         </li>
         <li class="nav-item">
           <a class="nav-link" id="url">
+            <Link to='/author' style={{color:"white"}}> Author</Link>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="url">
             <Link to='/contact' style={{color:"white"}}> Contact</Link>
           </a>
         </li>
