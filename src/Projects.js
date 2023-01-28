@@ -30,7 +30,7 @@ function Projects() {
           <div class="row">
             <div class="col-md-6 gx-5 mb-4" style={{marginTop:"6%"}}>
             <Link to={`${url}/hosting`}>
-              <h4 style={{color:"black"}}><strong>POHosting my website created using React, Flask and MongoDB on AWS</strong></h4>
+              <h4 style={{color:"black"}}><strong>Hosting my website created using React, Flask and MongoDB on AWS</strong></h4>
               </Link>
               <p class="text-muted">
               One of the most important, frustrating, common and underrated tasks in web development is hosting the web service. Underrated for student developers, because they usually don’t come to the stage of building full-fledged applications to be used on a large scale and hence they don’t care much about hosting their web application projects. Underrated for professional developers working in big Companies, because they have dedicated automated scripts and tools that deploys and hosts their web services for them with few commands, for example, Walmart has OneOps and Amazon has AWS.
